@@ -12,6 +12,7 @@ import { WebSocketLink } from 'apollo-link-ws';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css';
+import './style.css';
 
 // const wsLink = new WebSocketLink({
 //   uri: 'wait back-end prod url',
