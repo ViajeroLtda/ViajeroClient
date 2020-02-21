@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loader, Icon } from 'semantic-ui-react';
+import { Loader } from 'semantic-ui-react';
 import SideBarItem from '../SideBarItem';
 import SideBarStyled from './style';
 
