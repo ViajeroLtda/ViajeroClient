@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,400,700|Raleway:100,300,400,700&display=swap');
 
-* {
-	font-family: 'Raleway', sans-serif!important;
+*,
+*::before,
+*::after {
 	font-weight: normal!important;
-	/* font-family: 'Montserrat', sans-serif; also available */
+  box-sizing: border-box;
 }
+
+
 body {
+	font-family: 'Raleway', sans-serif!important;
+	/* font-family: 'Montserrat', sans-serif; also available */
+	font-weight: normal!important;
 	background: #F6F6F9;
 }

@@ -3,24 +3,24 @@ import { Grid, Segment } from 'semantic-ui-react';
 import SideBar from '../components/Sidebar';
 const items = [
   {
-    icon: 'abc',
-    title: 'def'
+    icon: 'newspaper outline',
+    anchor: 'News'
   },
   {
-    icon: 'abc',
-    title: 'def'
+    icon: null,
+    anchor: 'Messages'
   }
 ]
 const Dashboard = () => {
   return (
-    <Grid columns='equal'>
-      <Grid.Column>
+    <Grid>
+      <Grid.Column width={3}>
         <SideBar items={items} />
       </Grid.Column>
-      <Grid.Column width={8}>
+      <Grid.Column width={10}>
         <Segment>2</Segment>
       </Grid.Column>
-      <Grid.Column>
+      <Grid.Column width={3}>
         <Segment>3</Segment>
       </Grid.Column>
     </Grid>

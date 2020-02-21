@@ -1,5 +1,6 @@
 import React from 'react';
-import { Loader } from 'semantic-ui-react';
+import { Loader, Icon } from 'semantic-ui-react';
+import SideBarItem from '../SideBarItem';
 import SideBarStyled from './style';
 
 const SideBarComponent = ({ items, children }) => {
@@ -7,7 +8,7 @@ const SideBarComponent = ({ items, children }) => {
   return (
     <SideBarStyled>
       {items.map(i => (
-        <span>{i.title}</span>
+        <SideBarItem icon={i.icon} anchor={i.anchor} />
       ))}
     </SideBarStyled>
   )
