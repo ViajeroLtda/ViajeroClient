@@ -3,7 +3,7 @@
 *,
 *::before,
 *::after {
-	font-weight: normal!important;
+	font-weight: normal;
   box-sizing: border-box;
 }
 
@@ -11,6 +11,5 @@
 body {
 	font-family: 'Raleway', sans-serif!important;
 	/* font-family: 'Montserrat', sans-serif; also available */
-	font-weight: normal!important;
 	background: #F6F6F9;
 }

@@ -7,14 +7,35 @@ const items = [
     anchor: 'News'
   },
   {
-    icon: null,
+    icon: 'comment alternate outline',
     anchor: 'Messages'
-  }
+  },
+  {
+    icon: 'user outline',
+    anchor: 'Friends',
+
+  },
+  {
+    icon: 'compass outline',
+    anchor: 'Community',
+  },
+  {
+    icon: 'calendar alternate outline',
+    anchor: 'My planned trips',
+  },
 ]
 const Dashboard = () => {
   return (
+    <>
     <Grid>
-      <Grid.Column width={3}>
+      <Grid.Row>
+        <Grid.Column width={16}>
+          <Segment>HEADER</Segment>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+    <Grid>
+      <Grid.Column width={3} style={{ paddingBottom: 0 }}>
         <SideBar items={items} />
       </Grid.Column>
       <Grid.Column width={10}>
@@ -24,6 +45,7 @@ const Dashboard = () => {
         <Segment>3</Segment>
       </Grid.Column>
     </Grid>
+    </>
   )
 }
 

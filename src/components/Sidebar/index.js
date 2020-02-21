@@ -3,12 +3,14 @@ import { Loader } from 'semantic-ui-react';
 import SideBarItem from '../SideBarItem';
 import SideBarStyled from './style';
 
-const SideBarComponent = ({ items, children }) => {
-  if (!items) return <Loader active inverted />
+const SideBarComponent = ({ items }) => {
+  if (!items) return <span></span>
   return (
     <SideBarStyled>
-      {items.map(i => (
-        <SideBarItem icon={i.icon} anchor={i.anchor} />
+      {items.map((i, index) => (
+        <>
+          <SideBarItem key={index} selected={index === 0 ? true : false} icon={i.icon} anchor={i.anchor} />
+        </>
       ))}
     </SideBarStyled>
   )
