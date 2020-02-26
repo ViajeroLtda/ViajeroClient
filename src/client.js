@@ -1,17 +1,14 @@
 // deploy configs
-import { useState, useEffect } from 'react';
-import { GraphQLClient } from 'graphql-request';
+import { useState, useEffect, useContext } from 'react';
 
-export const BASE_URL = process.env.NODE_ENV === "production" ? "insert-prod-url-here/graphql" : "http://localhost:4000/graphql";
+export const BASE_URL = process.env.NODE_ENV === "production" ? "insert-prod-url-here" : "http://localhost:3000/";
 
 export const useClient = () => {
   const [idToken, setIdtoken] = useState("");
   
   useEffect(() => {
-    const { id_token } = window.gapi.auth2.getAuthInstance().currentUser.get().getAuthResponse();
-    setIdtoken(id_token);
+    
+    setIdtoken('token-coming-from-login');
   }, [])
-  return new GraphQLClient(BASE_URL, {
-    headers: { authorization: idToken}
-  })
+
 }

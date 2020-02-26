@@ -7,10 +7,11 @@ const SideBarComponent = ({ items }) => {
   return (
     <SideBarStyled>
       {items.map((i, index) => (
-        <>
-          {console.log(index === 0 ? true : false)}
-          <SideBarItem key={index} selected={index === 0 ? true : false} icon={i.icon} anchor={i.anchor} />
-        </>
+        <SideBarItem 
+          key={index}
+          selected={index === 0 ? true : false}
+          icon={i.icon}
+          anchor={i.anchor} />
       ))}
     </SideBarStyled>
   )

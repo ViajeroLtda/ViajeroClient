@@ -1,22 +1,14 @@
 import React, { useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 import Context from '../context';
-import { GraphQLClient } from 'graphql-request';
 import GoogleLogin from 'react-google-login';
 import { BASE_URL } from '../client';
-import { ME_QUERY } from '../graphql/queries';
 
 const Login = () => {
   const { dispatch, state } = useContext(Context)
   const onSuccess = async googleUser => {
     try {
-      const tokenId  = googleUser.getAuthResponse().id_token;
-      const client = new GraphQLClient(BASE_URL, {
-        headers: { authorization: tokenId }
-      })
-      const { me } = await client.request(ME_QUERY);
-      dispatch({ type: 'LOGIN_USER', payload: me })
-      dispatch({ type: "IS_LOGGED_IN", payload: googleUser.isSignedIn() })
+      console.log('try')
     } catch (error) {
       onFailure();
       dispatch({ type: "IS_LOGGED_IN", payload: false })

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Grid, Segment } from 'semantic-ui-react';
 import SideBar from '../components/Sidebar';
+import Like from '../components/Like';
 const items = [
   {
     icon: 'newspaper outline',
-    anchor: 'News'
+    anchor: 'Feed'
   },
   {
     icon: 'comment alternate outline',
@@ -39,7 +40,7 @@ const Dashboard = () => {
         <SideBar items={items} />
       </Grid.Column>
       <Grid.Column width={10}>
-        <Segment>2</Segment>
+        <Segment><Like likesNumber="50" /></Segment>
       </Grid.Column>
       <Grid.Column width={3}>
         <Segment>3</Segment>
