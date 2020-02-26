@@ -4,12 +4,11 @@ import { Icon, Loader } from 'semantic-ui-react';
 import SideBarItemStyle from './style';
 
 const SideBarItem = ({ icon, anchor, selected }) => {
-  console.log({ icon });
   return (
-    <SideBarItemStyle>
-      <Link to={anchor}>
+    <SideBarItemStyle selected={selected}>
+      <Link to={anchor.toLowerCase()}>
         {icon ? <Icon name={icon} /> : <Loader size="mini" active /> }
-        <p selected={selected}>{anchor}</p>
+        <p>{anchor}</p>
       </Link>
     </SideBarItemStyle>
   )

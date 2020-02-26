@@ -36,8 +36,8 @@ const Root = () => {
       <ApolloProvider client={client}>
         <Context.Provider value={{ state, dispatch }}>
           <Switch>
-            <ProtectedRoute path="/" exact component={Dashboard} />
             <Route path="/login" component={Login} />
+            <ProtectedRoute path="/" exact component={Dashboard} />
           </Switch>
         </Context.Provider>
       </ApolloProvider>

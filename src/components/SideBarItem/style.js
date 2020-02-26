@@ -5,8 +5,6 @@ const SideBarItemStyle = styled.div`
   align-items: center;
   justify-content: left;
   height: 35px;
-  font-weight: ${props => props.selected ? 'bolder' : 'normal'};
-  border: ${props => props.selected ? 'bolder' : 'normal'};
   a {
     display: flex;
     align-items: center;
@@ -22,6 +20,7 @@ const SideBarItemStyle = styled.div`
       height: 20px;
     }
     p {
+      font-weight: ${props => props.selected ? 'bolder' : 'normal'};
       margin-left: 10px;
     }
   }

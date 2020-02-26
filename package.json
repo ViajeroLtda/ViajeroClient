@@ -20,7 +20,9 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2",
     "styled-components": "^5.0.1",
-    "subscriptions-transport-ws": "^0.9.15"
+    "subscriptions-transport-ws": "^0.9.15",
+    "graphql-request": "^1.8.2",
+    "react-google-login": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

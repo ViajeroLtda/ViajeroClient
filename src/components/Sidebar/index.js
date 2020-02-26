@@ -1,5 +1,4 @@
 import React from 'react';
-import { Loader } from 'semantic-ui-react';
 import SideBarItem from '../SideBarItem';
 import SideBarStyled from './style';
 
@@ -9,6 +8,7 @@ const SideBarComponent = ({ items }) => {
     <SideBarStyled>
       {items.map((i, index) => (
         <>
+          {console.log(index === 0 ? true : false)}
           <SideBarItem key={index} selected={index === 0 ? true : false} icon={i.icon} anchor={i.anchor} />
         </>
       ))}
