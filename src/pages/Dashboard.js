@@ -36,10 +36,10 @@ const Dashboard = () => {
       </Grid.Row>
     </Grid>
     <Grid>
-      <Grid.Column width={3} style={{ paddingBottom: 0 }}>
-        <SideBar items={items} />
+      <Grid.Column width={1} style={{ paddingBottom: 0 }}>
+        {/* <SideBar items={items} /> */}
       </Grid.Column>
-      <Grid.Column width={10}>
+      <Grid.Column width={12}>
         <Segment><Like likesNumber="50" /></Segment>
       </Grid.Column>
       <Grid.Column width={3}>

@@ -19,7 +19,7 @@ const Like = ({ liked, likesNumber }) => {
   }
   return (
     <>
-      <Icon name={`thumbs up${!liked ? ' outline' : ''}`} />
+      <Icon color={liked && 'red'} name={`heart${!liked ? ' outline' : ''}`} />
       {formatedLikesNumber < 1 ? 0 : formatedLikesNumber}
     </>
   )
