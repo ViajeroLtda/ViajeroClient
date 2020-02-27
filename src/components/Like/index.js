@@ -11,9 +11,9 @@ const Like = ({ liked, numberOfLikes }) => {
   const formatnumberOfLikesToK = (numberOfLikes) => {
     return (
       Math.abs(numberOfLikes) > 999 ? (
-        formatnumberOfLikes(`${Math.sign(numberOfLikes)*((Math.abs(numberOfLikes)/1000).toFixed(1))}k`)
+        formatnumberOfLikes(`${Math.sign(numberOfLikes) * ((Math.abs(numberOfLikes)/1000).toFixed(1))}k`)
       ) : (
-        formatnumberOfLikes(Math.sign(numberOfLikes)*Math.abs(numberOfLikes))
+        formatnumberOfLikes(Math.sign(numberOfLikes) * Math.abs(numberOfLikes))
       )
     )
   }

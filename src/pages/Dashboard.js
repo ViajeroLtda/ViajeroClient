@@ -13,14 +13,14 @@ const Dashboard = () => {
       </Grid.Row>
     </Grid>
     <Grid>
-      <Grid.Column width={2}></Grid.Column>
-      <Grid.Column width={9}>
+      <Grid.Column width={3}></Grid.Column>
+      <Grid.Column width={7}>
         <Segment><Post /></Segment>
       </Grid.Column>
       <Grid.Column width={3}>
         <Segment>3</Segment>
       </Grid.Column>
-      <Grid.Column width={2}></Grid.Column>
+      <Grid.Column width={3}></Grid.Column>
       
     </Grid>
     </>
