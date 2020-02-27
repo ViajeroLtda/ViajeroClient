@@ -1,26 +1,29 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Icon } from 'semantic-ui-react';
 
-const Like = ({ liked, likesNumber }) => {
+const Like = ({ liked, numberOfLikes }) => {
   const [ isLiked, setIsLiked ] = useState(liked || false);
-  const [ formatedLikesNumber, formatLikesNumber ] = useState("");
+  const [ formatedNumberOfLikes, formatnumberOfLikes ] = useState("");
   useEffect(() => {
-    formatLikesNumberToK(likesNumber || 0);
-  }, []);
+    formatnumberOfLikesToK(numberOfLikes || 0);
+  }, [numberOfLikes]);
 
-  const formatLikesNumberToK = (likesNumber) => {
-    console.log(formatLikesNumber(
-      Math.abs(likesNumber) > 999 ? (
-        `${Math.sign(likesNumber)*((Math.abs(likesNumber)/1000).toFixed(1))}k`
+  const formatnumberOfLikesToK = (numberOfLikes) => {
+    return (
+      Math.abs(numberOfLikes) > 999 ? (
+        formatnumberOfLikes(`${Math.sign(numberOfLikes)*((Math.abs(numberOfLikes)/1000).toFixed(1))}k`)
       ) : (
-        Math.sign(likesNumber)*Math.abs(likesNumber)
+        formatnumberOfLikes(Math.sign(numberOfLikes)*Math.abs(numberOfLikes))
       )
-    ));
+    )
   }
   return (
     <>
-      <Icon color={liked && 'red'} name={`heart${!liked ? ' outline' : ''}`} />
-      {formatedLikesNumber < 1 ? 0 : formatedLikesNumber}
+      <Icon
+        color={isLiked && 'red'} name={`heart${!isLiked ? ' outline' : ''}`}
+        onClick={() => setIsLiked(!isLiked)}
+      />
+      {formatedNumberOfLikes < 1 ? null : formatedNumberOfLikes}
     </>
   )
 }
