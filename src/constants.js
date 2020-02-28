@@ -1,3 +1,6 @@
+export const iconDefaultSize = 'large';
+
+
 export const countries = [
   { name: 'Afghanistan', countryCode: 'af' },
   { name: 'Aland Islands', countryCode: 'ax' },

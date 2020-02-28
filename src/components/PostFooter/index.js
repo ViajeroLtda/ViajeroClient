@@ -1,14 +1,23 @@
 import React from 'react';
+import { Divider } from 'semantic-ui-react';
+import { iconDefaultSize } from '../../constants';
 import { Icon } from 'semantic-ui-react';
 import Like from '../Like';
+import PostLikesSummaryLine from '../PostLikesSummaryLine';
 import PostFooterWrapper from './style';
 
 const PostFooter = () => {
   return (
     <PostFooterWrapper>
-      <Like numberOfLikes="108532" />
-      <Icon name="comment outline" />
-      <Icon name="paper plane outline" />
+      <section>
+        <Like />
+        <Icon size={iconDefaultSize} name="comment outline" />
+        <Icon size={iconDefaultSize} name="bookmark outline" />
+      </section>
+      <p></p>
+      <section>
+        <PostLikesSummaryLine />
+      </section>
     </PostFooterWrapper>
   )
 }
