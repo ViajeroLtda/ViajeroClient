@@ -7,7 +7,15 @@ const Tags = () => {
   return (
     <>
       {tags.map((i, index) => (
-        <Label as="a" color="blue" basic style={{ marginLeft: index === 0 ? '0' : 'auto' }} >{i}</Label>
+        <Label
+          as="a"
+          color="blue"
+          basic
+          key={index}
+          style={{ marginLeft: index === 0 ? '0' : 'auto' }}
+        >
+          {i}
+        </Label>
       ))}
     </>
   )
