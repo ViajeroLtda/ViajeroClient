@@ -1,6 +1,6 @@
 import React from 'react';
 import { Divider } from 'semantic-ui-react';
-import Gallery from '../Gallery';
+import PostContent from '../PostContent';
 import PostHeader from '../PostHeader';
 import PostFooter from '../PostFooter';
 
@@ -9,7 +9,7 @@ const Post = () => {
     <>
       <PostHeader />
       <Divider />
-      <Gallery />
+      <PostContent />
       <Divider />
       <PostFooter />
     </>

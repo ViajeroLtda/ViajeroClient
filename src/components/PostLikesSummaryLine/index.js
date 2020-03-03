@@ -5,7 +5,7 @@ import { likesNumberFormatter } from '../../helpers';
 const PostLikesSumaryLine = ({ numberOfLikes }) => {
   return (
     <small>
-      Liked by&nbsp;
+      Viewed by&nbsp;
       <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
       <span>UserXPTO</span> and other&nbsp;
       {likesNumberFormatter(12312 - 1)}
