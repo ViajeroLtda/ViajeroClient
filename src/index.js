@@ -1,10 +1,13 @@
 import React, { useContext, useReducer } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Grid, Segment, Image } from 'semantic-ui-react';
 import ReactDOM from 'react-dom';
 import Context from './context';
 import reducer from './reducer';
+import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
+import Question from './pages/Question';
 import ProtectedRoute from './ProtectedRoute';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
@@ -35,9 +38,19 @@ const Root = () => {
       {/* <ApolloProvider client={client}> */}
       <ApolloProvider client={client}>
         <Context.Provider value={{ state, dispatch }}>
+          <Segment>
+            <Grid columns='equal'>
+              <Grid.Column></Grid.Column>
+              <Grid.Column width={10}>
+                <Header />
+              </Grid.Column>
+              <Grid.Column></Grid.Column>
+            </Grid>
+          </Segment>
           <Switch>
             <Route path="/login" component={Login} />
             <ProtectedRoute path="/" exact component={Dashboard} />
+            <ProtectedRoute path="/question/:id/" component={Question} />
           </Switch>
         </Context.Provider>
       </ApolloProvider>
