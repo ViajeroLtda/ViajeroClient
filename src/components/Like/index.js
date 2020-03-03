@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { iconDefaultSize } from '../../constants';
 import { Icon } from 'semantic-ui-react';
 
-const Like = ({ liked, numberOfLikes }) => {
+const Like = ({ liked }) => {
   const [ isLiked, setIsLiked ] = useState(liked || false);
   return (
     <>

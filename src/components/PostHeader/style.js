@@ -5,9 +5,11 @@ const PostAuthorWrapper = styled.header`
   display: flex;
   align-items: center;
   flex-direction: row;
+  flex-wrap:nowrap;
   i {
     margin-left: auto;
   }
+  
 `;
 
 export default PostAuthorWrapper;

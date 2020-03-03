@@ -1,9 +1,9 @@
 import React from 'react';
-import { Divider } from 'semantic-ui-react';
 import { iconDefaultSize } from '../../constants';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Divider } from 'semantic-ui-react';
 import Like from '../Like';
 import PostLikesSummaryLine from '../PostLikesSummaryLine';
+import CommentBox from '../CommentBox';
 import PostFooterWrapper from './style';
 
 const PostFooter = () => {
@@ -17,6 +17,10 @@ const PostFooter = () => {
       <p></p>
       <section>
         <PostLikesSummaryLine />
+      </section>
+      <Divider hidden />
+      <section>
+        <CommentBox />
       </section>
     </PostFooterWrapper>
   )
