@@ -1,6 +1,6 @@
 import React, { useContext, useReducer } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Grid, Segment, Image } from 'semantic-ui-react';
+import { Grid, Segment } from 'semantic-ui-react';
 import ReactDOM from 'react-dom';
 import Context from './context';
 import reducer from './reducer';
@@ -48,9 +48,9 @@ const Root = () => {
             </Grid>
           </Segment>
           <Switch>
-            <Route path="/login" component={Login} />
             <ProtectedRoute path="/" exact component={Dashboard} />
             <ProtectedRoute path="/question/:id/" component={Question} />
+            <Route path="/login" component={Login} />
           </Switch>
         </Context.Provider>
       </ApolloProvider>

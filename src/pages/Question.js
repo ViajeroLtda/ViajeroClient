@@ -5,17 +5,7 @@ import Post from '../components/Post';
 const Question = () => {
   return (
     <>
-    <Grid>
-      <Grid.Column width={3}></Grid.Column>
-      <Grid.Column width={7}>
-        <Segment><Post /></Segment>
-      </Grid.Column>
-      <Grid.Column width={3}>
-        <Segment>3</Segment>
-      </Grid.Column>
-      <Grid.Column width={3}></Grid.Column>
-      
-    </Grid>
+      Question
     </>
   )
 }
