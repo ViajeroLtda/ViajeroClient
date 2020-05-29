@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import Context from './context';
 import reducer from './reducer';
 import Header from './components/Header';
-import Dashboard from './pages/Dashboard';
+import Feed from './pages/Feed';
 import Login from './pages/Login';
 import Question from './pages/Question';
 import ProtectedRoute from './ProtectedRoute';
@@ -38,17 +38,19 @@ const Root = () => {
       {/* <ApolloProvider client={client}> */}
       <ApolloProvider client={client}>
         <Context.Provider value={{ state, dispatch }}>
-          <Segment>
-            <Grid columns='equal'>
-              <Grid.Column></Grid.Column>
-              <Grid.Column width={10}>
-                <Header />
-              </Grid.Column>
-              <Grid.Column></Grid.Column>
-            </Grid>
-          </Segment>
+          {state.isAuth && (
+            <Segment>
+              <Grid columns='equal'>
+                <Grid.Column></Grid.Column>
+                <Grid.Column width={10}>
+                  <Header />
+                </Grid.Column>
+                <Grid.Column></Grid.Column>
+              </Grid>
+            </Segment>
+          )}
           <Switch>
-            <ProtectedRoute path="/" exact component={Dashboard} />
+            <ProtectedRoute path="/" exact component={Feed} />
             <ProtectedRoute path="/question/:id/" component={Question} />
             <Route path="/login" component={Login} />
           </Switch>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { iconDefaultSize } from '../../constants';
-import { Icon, Divider } from 'semantic-ui-react';
+import { Icon, Divider, Button } from 'semantic-ui-react';
 import Like from '../Like';
 import PostLikesSummaryLine from '../PostLikesSummaryLine';
 import CommentBox from '../CommentBox';
@@ -14,7 +14,7 @@ const PostFooter = () => {
         <Icon size={iconDefaultSize} name="comment outline" />
         <Icon size={iconDefaultSize} name="bookmark outline" />
       </section>
-      <p></p>
+      <Divider hidden />
       <section>
         <PostLikesSummaryLine />
       </section>

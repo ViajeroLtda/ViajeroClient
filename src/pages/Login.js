@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import { Grid, Segment } from 'semantic-ui-react';
 import GoogleLogin from 'react-google-login';
 import { GraphQLClient } from 'graphql-request';
@@ -26,7 +27,7 @@ const Login = () => {
       setLoading(false);
     }
   }
-  console.log({ isAuth })
+  if(isAuth) return <Redirect to="/" />;
   return (
     <>
       <Grid centered>
